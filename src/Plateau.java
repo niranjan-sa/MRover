@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 
 public class Plateau {
-	static int [][]plateau;
+	static int rows, col;
 	
 	static int getMaxCol() {
-		return plateau[0].length-1;
+		return col;
 	}
 	
 	static int getMaxRow() {
-		return plateau.length;
+		return rows+1;
 	}
 	
 	public static void main(String[] args) {
@@ -18,8 +18,10 @@ public class Plateau {
 		//Read the size of plateau
 		row=sc.nextInt();
 		cols=sc.nextInt();
+		
+		rows=row;
+		col=cols;
 		//create a plateau Actually I got this 2D array is unnecessary will remove it
-		plateau=new int[row+1][cols+1];
 		sc.nextLine();
 		//First Rover
 		String initPos[]=sc.nextLine().split(" ");
